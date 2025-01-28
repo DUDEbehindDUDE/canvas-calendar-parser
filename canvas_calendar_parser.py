@@ -62,11 +62,11 @@ class CanvasCalendarParser:
             str: Formatted event string
         """
         # Extract class name from brackets
-        class_name_match = re.search(r'(?<=\[)[^\[\]]+(?=\])', event_name)
-        if not class_name_match:
+        class_name_matches = re.findall(r'(?<=\[)[^\[\]]+(?=\])', event_name)
+        if not class_name_matches:
             return event_name
             
-        class_name = class_name_match.group(0)
+        class_name = class_name_matches[-1]
         assignment = event_name.replace(f"[{class_name}]", '').strip()
         
         # Extract course code (e.g., MATH-2164-001)
