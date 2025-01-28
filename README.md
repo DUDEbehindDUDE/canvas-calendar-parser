@@ -17,7 +17,7 @@ This script was created because I had an assignment where I had to list every as
 ## 📋 Prerequisites
 
 - Python 3.7 or higher
-- `ics` library (should install with `pip instal -r requirements.txt`)
+- `ics` library (should install with `pip install -r requirements.txt`)
 
 ## 💾 Installation
 
